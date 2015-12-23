@@ -50,6 +50,37 @@ p{
 .section{
 	text-align: center;
 }
+
+div#column1
+{
+	 float:left;
+	 margin:0;
+	 width:33%;
+	 max-width: auto;
+	 height: auto;
+}
+
+div#column2
+{
+
+	 float:left; 
+	 margin:0;
+	 width:50%;
+	 max-width: auto; 
+	 height: auto;
+}
+
+div#column3
+{
+	 float:left;
+	 margin:0;
+	 width:50%;
+	max-width: auto; 
+	height: auto;
+	
+}
+
+
 #menu li {
 	display:inline-block;
 	margin: 10px;
@@ -92,7 +123,7 @@ p{
 	margin:0;
 }
 
-/**********popup links**********/
+/**********links sign in sign up**********/
 .link_group {
 margin:20px auto;
 width:555px;
@@ -111,12 +142,10 @@ text-decoration:none;
 text-transform:uppercase;
 /*behavior: ;*/
 }
-.link_group a:hover {
-color:#cc0000;
-}
 
 
-/**********All styles popup**********/
+
+/**********popup form**********/
 .popup {
 padding:5px 15px 15px;
 position: absolute;
@@ -132,20 +161,21 @@ border-radius:15px;
 /*behavior: ;*/
 }
 .popup h2 {
-font:bold 18px/32px Arial, san-serif;
+font:bold 18px/32px helvetica;
 }
+
 .popup a.close {
-width:16px;
-height:16px;
+width:20px;
+height:20px;
 display:block;
 text-indent:-9999px;
 position:absolute;
 top:10px;
 right:10px;
-background:url(../images/close.png) no-repeat;
+background:url(../../Documents/d2g_sandbox/images/close.png) no-repeat;
 }
 
-/**********popup with form**********/
+/**********popup form style**********/
 .reg_form {
 margin-left:-200px;
 width:400px;
@@ -153,33 +183,28 @@ width:400px;
 .reg_form form {
 margin-top:10px;
 }
-.reg_form label {
-width:100px;
-height:26px;
-font:bold 12px/26px Arial, san-serif;
-display:inline-block;
-vertical-align:top;
-*display:inline;
-*zoom:1;
-}
+
 .reg_form input[type=text], .reg_form input[type=password] {
 margin-bottom:10px;
+float:left;
+text-align:left;
 padding:0 3px;
 width:274px;
 height:22px;
-font:bold 12px/26px Arial, san-serif;
+font:bold 12px/26px helvetica;
 border:1px solid #ccc;
 }
+
 .reg_form input[type=submit] {
 margin:10px 15px 0 0;
 padding:3px 10px;
-float:right;
+float: right;
 background:#ccc;
 border:0;
 -moz-border-radius:3px;
 -webkit-border-radius:3px;
 border-radius:3px;
-font:bold 10px Arial, san-serif;
+font:bold 10px helvetica;
 text-transform:uppercase;
 position:relative;
 cursor:pointer;
@@ -187,4 +212,5 @@ behavior: url(PIE.htc);
 }
 .reg_form input[type=submit]:hover {
 color:#fff;
+
 }

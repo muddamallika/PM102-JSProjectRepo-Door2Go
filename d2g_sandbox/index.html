@@ -4,20 +4,23 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<title>Doors2Go</title>
-
+<!-- General css for slides and text in slides-->
 	<link rel="stylesheet" type="text/css" href="style.css" />
+<!--Some custom css fullpage-->
 	<link rel="stylesheet" type="text/css" href="jquery.fullPage.css" />
+<!--Css for feedback slider bars-->
 	<link rel="stylesheet" type="text/css" href="style_feedback.css" />
-	<link rel="stylesheet" type="text/css" href="style_reg.css" />
 
-	<script type="text/javascript" src="js/jquery-1.11.2.min.js"></script>
-	<script type="text/javascript" src="js/jquery.fullPage.js"></script>
-	<script type="text/javascript" src="js/jquery.slimscroll.min.js"></script>
-	<script type="text/javascript" src="js/my_scripts.js"></script>
+
+	<script type="text/javascript" src="../../Documents/d2g_sandbox/js/jquery-1.11.2.min.js"></script>
+	<script type="text/javascript" src="../../Documents/d2g_sandbox/js/jquery.fullPage.js"></script>
+	<script type="text/javascript" src="../../Documents/d2g_sandbox/js/jquery.slimscroll.min.js"></script>
+	<script type="text/javascript" src="../../Documents/d2g_sandbox/js/my_scripts.js"></script>
 	
 
 </head>
 
+<!--Fullpage script-->
 <script>
 	jQuery(document).ready(function($) {
 		$("#fullpage").fullpage({
@@ -38,10 +41,19 @@
 			
 		});
 	})
+	
+	function change_visibility (block_4_close, block_4_open) {
+   $(document).ready(function(){
+       $('#'+block_4_close).css('display','none');
+       $('#'+block_4_open).css('display','');
+       return false;
+   });
+}
 </script>
 
 <body>
 
+<!--Uptop page menu-->
 <ul id="menu">
 	<li data-menuanchor="1stPage"><a href="#1stPage">Home</a></li>
 	<li data-menuanchor="2ndPage"><a href="#2ndPage">Sign up/Sign in</a></li>
@@ -50,91 +62,110 @@
 
 
 <div id="fullpage">
+<!--FIRST SLIDE BEGIN-->
 	<div class="section " id="section0">
-	<h1>Logo! </h1>
+	<!--PUT LOGO HERE-->
+	<h1>Door2Go</h1>
+	<!--THREE BARS WITH VIDEO, DESCRIPTION, IMAGE-->
 	<div id="contentBox" style="margin:0 auto; width:70%">
 
-		<div id="column1" style="float:left; margin:0; width:33%;">
-		<iframe width="300" height="169" src="https://www.youtube.com/embed/rYtpA0ioRp8" frameborder="0" allowfullscreen></iframe>
-			
+
+
+		<div id="column2">
+			A website for individuals with skills willing to provide services at doorstep at a nominal cost and users looking for services without having to travel long distances or pay a lot of money for a service.
+		
+		How it works:
+
+Skilled individuals willing to provide doorstep service at a nominal cost will register himself/herself on the website with the details of the skills they posses, their level of expertise with certifications, qualifications, etc, along with other details like their charge, distance they can travel and any other relevant details.
+
+Users looking for a certain service and not willing to travel or do not want to pay more going to professionals or professional institutes can register themselves and find the necessary service and suitable instructor or service provider and interact with them directly and avail the service at their doorstep.
+
+To validate the credibility, an option to leave feedback and rate the skilled individual on their performance will be provided to the users. We could also provide an option to the user to speak to the other users who already availed a certain service to get the feedback.
 		</div>
 
-		<div id="column2" style="float:left; margin:0;width:33%;">
-			Doors2Go is.... 
-			Эпизод с кукольным домиком
-Моника получает неожиданное наследство от тети, ей привозят красивый кукольный домик, Фиби видя такую прелесть решает самостоятельно сделать подобный домик. У Чендлера возникают проблемы, когда он пытается расстаться с начальницей Рэйчел, с которой умудрился закрутить роман.
-Смотрите онлайн 20 серию 3 сезона сериала Друзья на украинском языке бесплатно в хорошем качестве. Видео так же доступно для просмотра на мобильных гаджетах iPad, iPhone и Android устройствах.
-		</div>
-
-		<div id="column3" style="float:left; margin:0;width:33%">
+		<div id="column3">
 			<img src="http://static.giantbomb.com/uploads/scale_small/8/82962/1750360-marvelous_misadventures_flapjack1.jpg">
 		</div>
 	</div>
-		<!--<div class="intro">	-->
-		<!--		<p class="opisanie">Video, about us</p> -->
-	<!--	</div>  -->
+
 	</div>
-	
+<!--FIRST SLIDE END-->	
+<!--SECOND SLIDE BEGIN-->	
 	<div class="section" id="section1">
-		
 
-
-				
-				 <div class="link_group">
+	<!--AFTER LOGIN HERE WILL BE BRIEF INFORMATION ABOUT USER-->	
+<div id="r1" > 				
+	<!--LOGIN AND REGISTRATION LINKS-->
+				<div class="link_group">
 					<a class="show_popup" rel="reg_form" href="#"><h1>sign in</h1></a>
-					<a  rel="reg_form" href="reg.html"><h1>sign up</h1></a>
+					<a  rel="reg_form" href="../../Documents/d2g_sandbox/reg.html"><h1>sign up</h1></a>
 				</div>
-					
-				
+	</div>
+	<!--POP UP FILLING-->			
 	<div class="popup reg_form">
-		<a class="close" href="#">Close</a>
-		<h2>Регистрация на сайте</h2>
+		<a class="close" href="#"></a>
+		<h2>Log in</h2>
 		<form method="post" action="">
-			<label for="login">Введите логин:</label>
-			<input type="text" name="login" />
-			<label for="password">Введите пароль:</label>
-			<input type="password" name="password" />
-			<input type="submit" value="Войти" />	
+				
+			<input type="text" name="login" placeholder="username" />	
+			<input type="password" name="password" placeholder="password"/>
+			<input onclick="change_visibility ('r1', 'r0')" type="button" value="Login" />	
+			
 		</form>
 	</div>
-		
+	<div id="r0" style="display:none"> 
+	<p> Hello, %username% ! </p>
+	<p>First Name Last Name</p>
+	
+	<input onclick="change_visibility ('r0', 'r1')"  type="button" value="logout" />	 
+	
 	</div>
+
+	</div>
+
+	<!--SECOND SLIDE END-->
+	
+	<!--THIRD SLIDE BEGIN-->
 	<div class="section" id="section2">
 		<div class="intro">
 
+		<!--CONTACT FORM (TEMPLATE)-->
 			<div class="container">
 			
   <form id="contact" action="" method="post">
     <h3>Have anything to say?</h3>
     <fieldset>
-      <input placeholder="Your name" type="text" tabindex="1" required autofocus>
+      <input placeholder="Your name" type="text" tabindex="1">
     </fieldset>
     <fieldset>
-      <input placeholder="Your Email Address" type="email" tabindex="2" required>
+      <input placeholder="Your Email Address" type="email" tabindex="2">
     </fieldset>
     <fieldset>
-      <input placeholder="Your Web Site starts with http://" type="url" tabindex="4" required>
+      <input placeholder="Your Web Site starts with http://" type="url" tabindex="4">
     </fieldset>
     <fieldset>
-      <textarea placeholder="Type your Feedback here..." tabindex="5" required></textarea>
+      <textarea placeholder="Type your Feedback here..." tabindex="5"></textarea>
     </fieldset>
     <fieldset>
       <button name="submit" type="submit" id="contact-submit" data-submit="...Sending">Submit</button>
     </fieldset>
   </form>
-
-
 </div>
+<!--HERE WILL BE FEEDBACK #1-->
 		<div class ="container">
 		<div id="contact">
-		<div class="pic"><img src="images/user_pic.png">Username or smth...</div>
-		<p>Some feedback</p></div>
+		<p>Lila said:</p>
+		<textarea type="text" disabled="true"/>FeedbackFeedbackFeedbackFeedbackFeedbackFeedbackFeedbackFeedbackFeedbackFeedbackFeedbackFeedback</textarea>
 		</div>
+		</div>
+<!--HERE WILL BE FEEDBACK #2-->
 		<div class ="container">
-		<div id="contact"><p>Some another feedback... background not going to be green...</p></div>
+		<div id="contact">
+		<p>John said:</p>
+		<textarea type="text" disabled="true"/>FeedbackFeedbackFeedbackFeedbackFeedbackFeedbackFeedbackFeedbackFeedbackFeedbackFeedbackFeedback</textarea>
 		</div>
 		</div>
-	</div>
+	<!--THIRD SLIDE END-->
 </div>
 
 
