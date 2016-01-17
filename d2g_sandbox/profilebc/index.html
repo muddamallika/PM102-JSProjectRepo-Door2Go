@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Type" content="text/html">
+  <title>Door2Go</title>
+  <link rel="stylesheet" type="text/css" media="all" href="css/styles.css">
+  <script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
+</head>
+
+<body>
+  
+  <div id="w">
+    <div id="content" class="clearfix">
+      <div id="userphoto"><img src="images/avatar.png" alt="default avatar"></div>
+      <h1>User Profile</h1>
+
+      <nav id="profiletabs">
+        <ul class="clearfix">
+          <li><a href="#bio" class="sel">Bio</a></li>
+          <li><a href="#contact">Contact box</a></li>
+          <li><a href="#settings">Profile details</a></li>
+        </ul>
+      </nav>
+      
+      <section id="bio">
+        <p>hey my name is rick </p>
+        
+        <p>Саша учился в военно-морском вузе в Питере, а родом был из Воронежа. И вот его как-то раз занесло по весне в родной город. Солнышко уже изрядно припекало, но приказа о переходе на летнюю форму одежды все не было. Ненавистный всем морякам форменный "слюнявчик", закрывающий вместо шарфа грудь и шею стал натурально невыносим, и Саша его снял. Идет он, как настоящий морской волк по Воронежу, а навстречу патруль. "Где?" - не церемонясь сурово тыкнул ему в грудь капитан ПВО, которому в тот раз выпало быть начальником патруля. "Что?" - удивился Саша. "Товарищ курсант, почему не по уставу одеты?" - сделал еще одну попытку капитан. "Виноват, товарищ капитан! Не понимаю!" - пошел в наступление Саша. "Где вот это вот?" - беспомощно тыкал пальцем капитан. "Это...?" - искренне не понимал Саша. " Вы, наверное, имеете ввиду кнехт?" - озарилось пониманием его лицо. "Да-да, кнехт! Где он?" - торжествующе и снова грозно спросил капитан. "Виноват, товарищ капитан! Забыл надеть!" - сконфужено докладывал моряк. "Документы. Будем писать в ваш ВУЗ", - капитан явно был доволен.</p>
+        </section>
+
+      <section id="contact" class="hidden">
+        <p>contact this person</p>
+        <form id="contact" action="" method="post">
+    <fieldset>
+      <input placeholder="Your name" type="text" tabindex="1">
+    </fieldset>
+    <fieldset>
+      <textarea placeholder="Type your Message here..." tabindex="5"></textarea>
+    </fieldset>
+    <fieldset>
+      <button name="submit" type="submit" id="contact-submit" data-submit="...Sending">Submit</button>
+    </fieldset>
+  </form>
+      </section>
+      
+      <section id="settings" class="hidden">
+        <p>Look at someones profile/Edit your user settings:</p>
+        <form type="Edit Profile">
+        <p class="setting"><span>Email</span> <input type="text" name="email" id="nob" onchange="confirm_email();" value="omnomnom"> </p>
+        
+        <p class="setting"><span>Password</span> <input type="text" name="pass" onchange="confirm_pass();" id="nob" value="omnomnom"></p>
+        
+        <p class="setting"><span>First name</span> <input type="text" name="fname" onchange="confirm_first_name();" id="nob" value="omnomnom"></p>
+            
+        <p class="setting"><span>Last name</span> <input name="lname" onchange="confirm_last_name();" type="text" id="nob" value="omnomnom"></p>
+        
+        <p class="setting"><span>Phone</span> <input type="text" name="phone" onchange="confirm_phone();" id="nob" value="omnomnom"></p>
+        
+        <p class="setting"><span>Street</span> <input type="text"  name="street" onchange="confirm_street();" id="nob" value="omnomnom"></p>
+          
+        <p class="setting"><span>City</span> <input type="text" name="city" onchange="confirm_city();" id="nob" value="omnomnom"></p>
+          
+        <p class="setting"><span>Country</span> <input type="text" id="nob" value="omnomnom"></p>
+          
+        <p class="setting"><span>Gender</span> <input type="text" id="nob" value="omnomnom"></p>
+          
+        <p class="setting"><span>Birthday</span> <input type="text" id="nob" value="omnomnom"></p>
+          
+        <p class="setting"><span>I provide services</span> </p>
+</form>
+          <a href="edit_prof.html"><input type="button" value="Edit Profile"></a>
+        
+      </section>
+    </div>
+  </div>
+<script type="text/javascript">
+$(function(){
+  $('#profiletabs ul li a').on('click', function(e){
+    e.preventDefault();
+    var newcontent = $(this).attr('href');
+    
+    $('#profiletabs ul li a').removeClass('sel');
+    $(this).addClass('sel');
+    
+    $('#content section').each(function(){
+      if(!$(this).hasClass('hidden')) { $(this).addClass('hidden'); }
+    });
+    
+    $(newcontent).removeClass('hidden');
+      
+    
+  });
+});
+</script>
+</body>
+</html>
